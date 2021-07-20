@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="col-6 d-flex justify-content-end" id="totalPrincipal">
-                    @Model.Amount.ToString("C")
+                    @Model.Amount.ToString("C", new CultureInfo("en-US"))
                 </div>
 
                 <div class="col-6 mb-2">
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="col-6 d-flex justify-content-end" id="totalIntrest">
-                    @Model.TotalInterest.ToString("C")
+                    @Model.TotalInterest.ToString("C", new CultureInfo("en-US"))
                 </div>
 
                 <div class="col-6">
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-6 d-flex justify-content-end" id="totalCost">
-                    @Model.TotalCost.ToString("C")
+                    @Model.TotalCost.ToString("C", new CultureInfo("en-US"))
                 </div>
             </div>
         </div>
@@ -93,11 +93,11 @@
                         {
                         <tr>
                             <td>@item.Month</td>
-                            <td>@item.Payment.ToString("C")</td>
-                            <td>@item.MonthlyPrincipal.ToString("C")</td>
-                            <td>@item.MonthlyInterest.ToString("C")</td>
-                            <td>@item.TotalInterest.ToString("C")</td>
-                            <td>@item.Balance.ToString("C")</td>
+                            <td>@item.Payment.ToString("C", new CultureInfo("en-US"))</td>
+                            <td>@item.MonthlyPrincipal.ToString("C", new CultureInfo("en-US"))</td>
+                            <td>@item.MonthlyInterest.ToString("C", new CultureInfo("en-US"))</td>
+                            <td>@item.TotalInterest.ToString("C", new CultureInfo("en-US"))</td>
+                            <td>@item.Balance.ToString("C", new CultureInfo("en-US"))</td>
                         </tr>
                         }
                     </tbody>
