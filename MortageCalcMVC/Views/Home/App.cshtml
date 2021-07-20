@@ -1,4 +1,5 @@
 ﻿@model MortageCalcMVC.Models.Loan
+@using System.Globalization
 
 @{
     ViewData["Title"] = "Loan Calculator";
@@ -35,7 +36,7 @@
                 <p>Your Monthly Payments</p>
             </div>
             <p id="payment">
-                @Model.Payment.ToString("C")
+                @Model.Payment.ToString("C", new CultureInfo("en-US"))
             </p>
 
             <div class="row">
